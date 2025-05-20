@@ -1,0 +1,118 @@
+/*
+ * XP-like styles for Windows XP simulation
+ * This file contains styles to mimic the Windows XP visual theme
+ */
+
+/* System fonts */
+@font-face {
+    font-family: 'Tahoma';
+    src: url('https://fonts.gstatic.com/s/tahoma/v11/tahoma.ttf') format('truetype');
+}
+
+/* XP specific colors */
+:root {
+    --xp-blue: #0058E6;
+    --xp-blue-light: #3A93FF;
+    --xp-green: #36A33B;
+    --xp-beige: #ECE9D8;
+    --xp-titlebar-blue: linear-gradient(to right, #0058E6, #3A93FF);
+    --xp-button-face: #ECE9D8;
+    --xp-taskbar: linear-gradient(to bottom, #2A7FFF, #0058E6);
+}
+
+/* Classic XP window */
+.xp-window {
+    border: 1px solid var(--xp-blue);
+    border-radius: 0;
+    background-color: var(--xp-beige);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* XP titlebar */
+.xp-titlebar {
+    background: var(--xp-titlebar-blue);
+    color: white;
+    padding: 4px 6px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* XP buttons */
+.xp-button {
+    background-color: var(--xp-button-face);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.xp-button:hover {
+    background-color: #f5f5f5;
+}
+
+.xp-button:active {
+    background-color: #e0e0e0;
+    border-color: #666;
+}
+
+/* XP scrollbars */
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--xp-beige);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #C0C0C0;
+    border: 1px solid #999;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #A0A0A0;
+}
+
+::-webkit-scrollbar-button {
+    background-color: var(--xp-beige);
+    border: 1px solid #999;
+    display: block;
+    height: 16px;
+}
+
+/* XP inputs */
+.xp-input {
+    border: 1px solid #7A7A7A;
+    padding: 4px;
+    background-color: white;
+}
+
+.xp-input:focus {
+    border-color: var(--xp-blue);
+}
+
+/* XP Start menu */
+.xp-start-menu {
+    background-color: white;
+    border: 1px solid var(--xp-blue);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.xp-start-item {
+    padding: 6px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.xp-start-item:hover {
+    background-color: var(--xp-blue-light);
+    color: white;
+}
+
+.xp-start-item img {
+    margin-right: 8px;
+}
+
